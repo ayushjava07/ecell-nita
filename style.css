@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: none;
+}
+.cursor{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; 
+    z-index: 999;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+.outer{
+    border:1px solid #d2d1d2;
+}
+.inner{
+    background-color: #524d4d77;
+    transition: 250ms ease-out;
+}
+.cursor.hover {
+    transform: translate(-50%,-50%) scale(3); /* Makes cursor bigger on hover */
+    transition:  250ms ease-in-out; /* Changes color */
+}
+.inner.hover{
+    background: #f7f7f7;
+    mix-blend-mode: difference;
+}
+@font-face {
+    font-family: think;
+    src: url(./Think.otf);
+}
+@font-face {
+    font-family: infi1;
+    src: url(./MADEINFINITYOutlinePersonalUse-Light.otf);
+}
+@font-face {
+    font-family: infi2;
+    src: url(./MADEINFINITYBesidePersonalUse-Medium.otf);
+}
+@font-face {
+    font-family: infi3;
+    src: url(./MADEINFINITYOutlinePersonalUse-Black.otf);
+}
+@font-face {
+    font-family: grand1;
+    src: url(./CyGroteskStdTrial-GrandBold.otf);
+}
+@font-face {
+    font-family: grand2;
+    src: url(./CyGroteskStdTrial-GrandMedium.otf);
+}
+@font-face {
+    font-family: robin1;
+    src: url(./T1RobitTrial-Bold.otf);
+}
+@font-face {
+    font-family: robin2;
+    src: url(./VarpTrial-BasicSlanted.otf);
+}
+@font-face {
+    font-family: robin3;
+    src: url(./SegmentATrial-NarrowBlack.otf);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+[data-scroll-container]{
+    overflow: visible;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    font-family:grand1;
+}
+
+#main-home{
+    position: relative;
+    position: relative;
+    
+    gap: 1px;
+}
+#nav{
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 10;
+    padding: 2vh 2vh 2vh 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#pages{
+    display: flex;
+    font-family: robin1;
+    gap: 3vh;
+    font-size: 1.2vw;
+    margin-right: 2vw;
+    text-transform: capitalize;
+}
+#pages h2{
+    cursor: pointer;
+    /* background-color: #6a11cb; */
+    height: 4.2vh;
+    transition: all linear ease-in-out 1s;
+}
+#pages h2:hover{
+    border-bottom: 2px solid #ff0099;
+}
+#background img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    position: fixed;
+    filter: grayscale(90%);
+    filter: brightness(10%);
+    position: absolute;
+    z-index: -9;
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+#lside{
+    width: 50vw;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#lside h1{
+    padding-left:8vh;
+    font-size: 6vh;
+    text-wrap: nowrap;
+    color: rgb(255, 255, 255);
+    font-family: grand1;
+    background: linear-gradient(135deg, #6a11cb, #ff0099, #ffffff);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+#lside p{
+    font-size: 2vh;
+    width: 80vh;
+    text-align: start;margin-top: 1vh;
+}
+#knowmore {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 3vh;
+    background-color: #ff0099;
+    padding: 0.6vh;
+    margin-top: 2vh;
+}
+
+#knowmore h2 {
+    font-size: 3vh;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+#knowmore a {
+    font-size: 4vh;
+    color: #000000;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+#knowmore a:hover {
+    color: #ffffff;
+}
+
+#nav img{
+    width: 12vh;
+    height:12vh;
+    object-fit: cover;
+    image-resolution: 20%;
+}
+#page1 #rside{
+    margin-top: 20vh;
+    margin-left: 14vh;
+    width: 35vw;
+    height: 40vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid rgb(238, 0, 255); */
+    /* box-shadow: 0 0 10px white; */
+    border-radius: 2vw;
+}
+
+#rside h1{
+    width: 10vw;
+    color: #bebebe;
+    text-shadow: #ff0099 0 0 5px;
+    margin-left: 4vw;
+    margin-top: -5vh;
+    font-size: 3vw;
+    font-family: grand1;
+    text-transform: lowercase;
+    font-size: 8vh;
+}
+#rside .elem{
+    margin-top: 4vh;
+    padding: 1.3vw;
+    display: flex;
+    border-top: 2px solid rgb(180, 168, 168);
+    /* border-bottom: 2px solid rgb(81, 80, 80); */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: saddlebrown; */
+    
+
+
+}
+.elem h2{
+    font-family: think;
+    color: white;
+    font-size: 3vw;
+    font-weight: 200;
+    margin-right: 8px;
+    text-wrap: nowrap;
+
+    
+}
+.elem a{
+    font-family: think;
+    color: rgb(0, 234, 255);
+    font-size: 2vw;
+    font-weight: 200;
+    text-decoration: none;
+    font-family: infi3;
+    padding-left: 1vw;
+    text-wrap: nowrap;
+}
+.elem i{
+    color: white;
+    margin-top: 5px;
+}
+.elem i:hover{
+    color: rgb(226, 23, 229);
+}
+.elem:nth-last-child(1){
+    border-bottom: 2px solid rgb(169, 165, 157);
+    
+}
+#page2{
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(4, 4, 12);
+    text-align: center;
+    padding-top: 26vh;
+    overflow-x: hidden;
+}
+
+#page2 #ques{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 6vw;
+    padding-top: 0vh;
+    font-size: 2vw;
+    padding-right: 24vw;
+    padding-top: 1vh;
+}
+#page2 #ques h1{
+    padding-top: 1vh;
+}
+#page2 #ques h1:nth-last-child(1){
+    color: #ff0099;
+    position: absolute;
+    left: 50.3%;
+    top:50.47%;
+    
+}
+#page2 p{
+    width: 70vw;
+    font-size: 2vh;
+    display: flex;
+    text-align: start;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 200;
+    font-family: grand2;
+}
+.robo{
+    position: absolute;
+    scale: 0.5;
+    top: -20%;
+    left: 25%;
+    
+}
+#motobar {
+    display: flex;
+    height: 14vh;
+    font-size: 2.5vw;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid white;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top:72%;
+}
+#motobar #b{ 
+    color: rgb(255, 0, 225);
+
+}
+#motobar #i{ 
+    color: rgb(0, 242, 255);
+}
+/* Animate the inner container */
+.text-container {
+    display: flex;
+    gap: 26px;
+    animation: moto 20s linear infinite;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes moto {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move halfway so duplicate text fills the gap */
+    }
+}
