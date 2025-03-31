@@ -319,17 +319,27 @@ html , body{
     top:72%;
 }
 #motobar #b{ 
-    color: rgb(255, 0, 225);
+    
+    -webkit-text-stroke:  2px rgb(255, 0, 225);; 
+    color: transparent;
 
 }
+#motobar #t{ 
+    
+    -webkit-text-stroke:  2px rgb(255, 255, 255);; 
+    color: transparent;
+
+}
+
 #motobar #i{ 
-    color: rgb(0, 242, 255);
+    -webkit-text-stroke:  1px rgb(0, 242, 255); 
+    color: transparent;
 }
 /* Animate the inner container */
 .text-container {
     display: flex;
     gap: 26px;
-    animation: moto 20s linear infinite;
+    animation: moto 10s linear infinite;
 }
 
 /* Keyframes for continuous scrolling */
